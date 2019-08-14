@@ -6,6 +6,7 @@ import os
 import sys
 import time
 import queue
+import shutil
 import string
 import datetime
 import threading
@@ -32,6 +33,10 @@ def CreateList():
 def mk_localdir(file_name):
     if not os.path.isdir(file_name):
         os.mkdir(file_name)
+    else:
+        shutil.rmtree('file_name')
+        os.mkdir('file_name')
+
 
 def process_data(q):
     while not exitFlag:
