@@ -1,4 +1,17 @@
 #1368个单词
+#sed -i 's/[^a-zA-Z]/\n/g' file
+#sed  -i '/^$/d' file
+#脚本内容如下
+echo "<wordbook>" >> ttt.xml
+for i in `cat qqq.txt`;
+do
+echo "<item>" >> ttt.xml
+echo "<word>$i</word>" >> ttt.xml
+echo "</item>" >> ttt.xml
+done
+echo "</wordbook>" >> ttt.xml
+#新的ttt.xml文件可以导入到有道单词本
+
 有关物的单词
 	时间类
 	time morning afternoon noon evening night tonight today tomorrow 
@@ -439,7 +452,7 @@
 		than as
 		整体与部分
 		besides among except including
-		y因果
+		因果
 		according to
 		其他
 		despite per
